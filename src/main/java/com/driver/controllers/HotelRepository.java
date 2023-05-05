@@ -10,11 +10,17 @@ import java.util.*;
 @Repository
 public class HotelRepository {
 
-    private Map<String, Hotel> hotelMap = new HashMap<>();
-    private Map<Integer,User> userMap = new HashMap<>();
-    private Map<String,Booking> bookingMap = new HashMap<>();
-    private Map<Integer,List<String>> userBookingMap = new HashMap<>();
+    private Map<String, Hotel> hotelMap;
+    private Map<Integer,User> userMap;
+    private Map<String,Booking> bookingMap;
+    private Map<Integer,List<String>> userBookingMap;
 
+    public HotelRepository() {
+        this.hotelMap = new HashMap<>();
+        this.userMap = new HashMap<>();
+        this.bookingMap = new HashMap<>();
+        this.userBookingMap = new HashMap<>();
+    }
 
     public Optional<Hotel> getHotelByHotelName(String hotelName) {
         if(hotelMap.containsKey(hotelName)){
