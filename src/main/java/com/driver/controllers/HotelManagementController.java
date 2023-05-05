@@ -78,7 +78,7 @@ public class HotelManagementController {
 
         int amountToBePaid = hotelService.bookARoom(booking);
         
-        return 0;
+        return amountToBePaid;
     }
     
     @GetMapping("/get-bookings-by-a-person/{aadharCard}")
