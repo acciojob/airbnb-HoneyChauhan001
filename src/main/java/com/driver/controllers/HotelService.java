@@ -13,9 +13,7 @@ import java.util.*;
 @Service
 public class HotelService {
 
-
-    @Autowired
-    HotelRepository hotelRepository;
+    HotelRepository hotelRepository = new HotelRepository();
 
     public HotelService() {
     }
